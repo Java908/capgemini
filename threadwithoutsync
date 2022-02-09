@@ -1,0 +1,58 @@
+package thread;
+class Table{
+	void printTable(int n) {
+		for(int i=0;i<=5;i++) {
+			System.out.println(n*i);
+			
+		}
+		try {
+			Thread.sleep(9000);
+			
+		}
+	catch(Exception e) {
+		e.printStackTrace();
+	}
+	}
+
+	
+	}
+class MyThread1 extends Thread{
+	Table t;
+	MyThread1(Table t){
+		this.t=t;
+	}
+	public void run() {
+		System.out.println("Mythread 1 is ");
+		t.printTable(5);//passing value for mul 5
+	}
+}
+class MyThread2 extends Thread{
+	Table t;
+	MyThread2(Table t){
+		this.t=t;
+	}
+	public void run() {
+		System.out.println("Mythread 2 is ");
+		t.printTable(100);//passing value for mul 5
+	}
+}
+class MyThread3 extends Thread{
+	Table t;
+	MyThread3(Table t){
+		this.t=t;
+	}
+	public void run() {
+		System.out.println("Mythread 2 is ");
+		t.printTable(200);//passing value for mul 5
+	}
+}
+public class withoutsyncmethoddemo {
+	public static void main(String[] args) {
+		Table obj = new Table();
+		MyThread1 t1 = new MyThread1(obj);
+		MyThread2 t2 = new MyThread2(obj);
+		MyThread2 t3 = new MyThread2(obj);
+        t1.start();
+        t2.start();
+        t3.start();
+	}
