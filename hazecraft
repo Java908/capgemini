@@ -1,0 +1,30 @@
+package assignment1;
+import java.util.Scanner;
+public class Hazecraft {
+	public static void main(String[] args) {
+		int c=1;
+		int num=3;
+	    Scanner sc=new Scanner(System.in);
+		System.out.println("enter number");
+		int n=sc.nextInt();
+		if(n>=1) {
+			System.out.println(2);
+		}
+		for (int i=2;i<=n;) {
+			for (int j=2;j<=Math.sqrt(n);j++) {
+				if(num%j==0) {
+				c=0;
+				break;
+				}
+			}
+				if (c!=0) {
+					System.out.println(num);
+					i++;
+				}
+				c=1;
+				num++;
+			}
+			}
+		}
+
+
