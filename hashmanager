@@ -1,0 +1,21 @@
+package Collection;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Set;
+import java.util.Map.Entry;
+
+public class Hashmanager {
+	public static void main(String[] args)
+    {
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("TV", 10);
+        map.put("laptop", 30);
+        map.put("computer", 20);
+        Set<String> keys = map.keySet();
+        Collection<Integer> values = map.values();
+        Set<Entry<String, Integer>> entries = map.entrySet();
+        System.out.println("keys of Map : " + keys);
+        System.out.println("values from Map :" + values);
+        System.out.println("entries from Map :" + entries);
+        }
+    }
