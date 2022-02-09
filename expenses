@@ -1,0 +1,28 @@
+package assignment1;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+public class Expenses{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		final DecimalFormat d=new DecimalFormat("0.00");
+		System.out.println("enter branding expenses");
+		double branding=sc.nextDouble();
+		System.out.println("enter traveling expenses");
+		double traveling=sc.nextDouble();
+		System.out.println("enter food expenses");
+		double food=sc.nextDouble();
+		System.out.println("enter logistic expenses");
+		double logistic=sc.nextDouble();
+		double total=branding+traveling+food+logistic;
+		double s1=(branding/total)*100;
+		double s2=(traveling/total)*100;
+		double s3=(food/total)*100;
+		double s4=(logistic/total)*100;
+		System.out.println("total:"+d.format(total));
+		System.out.println("branding expenses percentage:"+d.format(s1)+"%");
+		System.out.println("traveling expenses percentage:"+d.format(s2)+"%");
+		System.out.println("food expenses percentage:"+d.format(s3)+"%");
+		System.out.println("logistics expenses percentage:"+d.format(s4)+"%");
+	}
+}
