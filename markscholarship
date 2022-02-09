@@ -1,0 +1,24 @@
+package assignment1;
+import java.util.Scanner;
+public class MarkScholarship {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter s1 marks");
+	int s1=sc.nextInt();
+	System.out.println("enter s2 marks");
+	int s2=sc.nextInt();
+	System.out.println("enter s3 marks");
+	int s3=sc.nextInt();
+	System.out.println("enter s4 marks");
+	int s4=sc.nextInt();
+	System.out.println("enter s5 marks");
+	int s5=sc.nextInt();
+	int avg=(s1+s2+s3+s4+s5)/5;
+	if(avg<4) {
+		System.out.println("No");	
+	}
+	else {
+		System.out.println("Yes");
+	}
+}
+}
