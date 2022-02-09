@@ -1,0 +1,35 @@
+package com.demo.abstarction;
+abstract class Pentium{
+	
+	public abstract void ram();
+	public abstract void speed();
+	public abstract void hdd();
+}
+public class CoreI7 extends Pentium{
+	public static void main(String[] args) {
+		
+		CoreI7 icore=new CoreI7();
+		icore.ram();
+		icore.speed();
+		icore.hdd();
+		
+	}
+
+	@Override
+	public void ram() {
+		// TODO Auto-generated method stub
+		System.out.println("corei7 is having good ram");
+	}
+
+	@Override
+	public void speed() {
+		// TODO Auto-generated method stub
+		System.out.println("fast");
+	}
+
+	@Override
+	public void hdd() {
+		// TODO Auto-generated method stub
+		System.out.println("good hdd features");
+	}
+}
