@@ -1,0 +1,23 @@
+package thread;
+public class Setthreadname extends Thread  
+{    
+    //public void run()  
+    {    
+        //System.out.println("running...");    
+    }    
+    public static void main(String args[])  
+    {    
+       
+        Setthreadname t1=new Setthreadname();    
+        Setthreadname t2=new Setthreadname();    
+        
+        t1.start();    
+        t2.start();       
+        
+        t1.setName("Shabby");    
+        t2.setName("Scooby");  
+           
+        System.out.println("Name of t1: "+t1.getName());  
+        System.out.println("Name of t2: "+t2.getName());  
+    }    
+}  
