@@ -1,0 +1,21 @@
+package Collection;
+import java.util.*;
+
+
+public class Collectiontypes {
+	public static void main(String[] args) {
+		PriorityQueue<String> x = new PriorityQueue<>();
+	
+	x.add("one");
+	x.add("two");
+	x.add("one");
+	System.out.println("Initial Queue: " + x);
+	  
+    // Fetching and removing the element at the head of the queue
+    System.out.println("The element at the head of the"
+                       + " queue is: " + x.poll());
+
+    // Displaying the Queue after the Operation
+    System.out.println("Final PriorityQueue: " + x);
+}
+}
