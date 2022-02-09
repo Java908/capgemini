@@ -1,0 +1,20 @@
+package Collection;
+import java.util.Comparator;
+import java.util.SortedSet;
+import java.util.TreeSet;
+public class Treesetdescendingorder {
+	public static void main(String[] args) {
+		SortedSet<String>fruits=new TreeSet<>(Comparator.reverseOrder());
+		SortedSet<String>fruits=new TreeSet<>(new Comparator<String>() {
+			@Override
+			public int compare(String s1, String s2) {
+				return s2.compareTo(s1);
+			} });
+		fruits.add("banana");
+		fruits.add("apple");
+		fruits.add("pineapple");
+		fruits.add("orange");
+		System.out.println("Fruits set:"+fruits);
+
+}
+}
