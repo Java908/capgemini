@@ -1,0 +1,23 @@
+package Collection;
+import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+public class Uniquecollections {
+	public static void main(String[] args) {
+	List<String> l1 = new ArrayList<String>();
+	l1.add("one");
+	l1.add("two");
+	l1.add("three");
+	l1.add("two");
+	l1.add("five");
+	l1.add("one");
+	 List<String> UniqueNumbers= l1.stream().distinct().collect(Collectors.toList());
+	 System.out.println("Unique Values of ArrayList");
+	  
+     
+     for (int i = 0; i < UniqueNumbers.size(); ++i) {
+         System.out.println(UniqueNumbers.get(i));
+}
+}
+}
