@@ -1,0 +1,20 @@
+package com.demo.inheritance;
+
+public class Exam {
+	 public void questions()
+	 {
+		 System.out.println("Exams are having questions to solve");
+	 }
+		
+	}
+	public class finalExam extends Exam{
+		public void BriefQuestions()
+		{
+			questions();
+			System.out.println("Students must write brief answers");
+		}
+		public static void main(String[] args) {
+			finalExam fex1=new finalExam();
+			fex1.BriefQuestions();
+		}
+	}
