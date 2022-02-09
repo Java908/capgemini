@@ -1,0 +1,18 @@
+package Collection;
+import java.util.ArrayList;
+import java.util.List;
+public class ListManager {
+	public static void main(String[] args) {
+	List<String>list1=new ArrayList<>();
+	list1.add("Java");
+	list1.add("C");
+	list1.add("Python");
+	list1.add("Ruby");
+	list1.add("C++");
+	List<String>list2=new ArrayList<>();
+	list2.add("C");
+	list2.add("C++");
+	list1.removeIf(item -> !list2.contains(item));
+	System.out.println(list1);
+}
+}
